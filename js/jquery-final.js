@@ -1,66 +1,65 @@
 console.log("jQuery-final.jsを読み込みます")
 
-// セレクタ
-let menuabout = $("menuabout").text();
-console.log('menuabout');
 
-let menumem = $("menumem").text();
-console.log('menumem');
-
-let menumv = $("menumv").text();
-console.log('menumv');
-
-$("#test-p-1").hide();
-function slide() {
-    $("#test-p-1").slideToggle();
-}
-
-
-function color() {
-    $("#menuabout").css("color","red");
-    $("#menumem").css("color","red");
-    $("#menumv").css("color","red");
-}
-
-
-// イベントハンドラ
-// focusイベントを取得
-$("#input-test").on("focus", function(){
-    console.log("インプットを取得");
+$(function () {
+  $('.member-details').hide();　//メンバーインスタをはじめは隠す
+});
+$("h3").on("click",function(){ //メンバーの名前をクリックした時
+    $(this).next().slideToggle();　//スライドトグルする
 });
 
-// clickイベント
-$("h3").on("click",function(){
-    $(this).next().slideToggle();
+
+//1
+$(function () {
+  $('.marina').hide();
+
+  $('.menumem').hover(
+    function () {
+      $(this).find('.marina').stop(true, true).slideDown('slow');
+    },
+    function () {
+      $(this).find('.marina').stop(true, true).slideUp('slow');
+    }
+  );
 });
 
-$(document).ready(function() {
-    
-    $('a').hover(
-        function() {
-            $(this).css('color', '#ffffff');
-        },
-    function() {
-             $(this).css('color', '#b0b0b0'); 
-            
-        }
-    );
+//2
+$(function () {
+  $('.miselle').hide();
 
-  
-    $('.main-nav li a').hover(
-        function() {
-         
-            $(this).css({
-                'background-color': '#333333',
-                'color': '#ffffff'
-            });
-        },
-        function() {
-           
-           $(this).css({
-                'background-color': '#000000',
-                'color': '#ffffff'
-            });
-        }
-    );
+  $('.menumem').hover(
+    function () {
+      $(this).find('.miselle').stop(true, true).slideDown('slow');
+    },
+    function () {
+      $(this).find('.miselle').stop(true, true).slideUp('slow');
+    }
+  );
 });
+
+$(function () {
+  $('.minter').hide();
+
+  $('.menumem').hover(
+    function () {
+      $(this).find('.minter').stop(true, true).slideDown('slow');
+    },
+    function () {
+      $(this).find('.minter').stop(true, true).slideUp('slow');
+    }
+  );
+});
+
+$(function () {
+  $('.mingning').hide();
+
+  $('.menumem').hover(
+    function () {
+      $(this).find('.mingning').stop(true, true).slideDown('slow');
+    },
+    function () {
+      $(this).find('.mingning').stop(true, true).slideUp('slow');
+    }
+  );
+});
+

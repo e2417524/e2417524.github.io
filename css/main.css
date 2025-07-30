@@ -16,6 +16,9 @@ a {
 }
 
 
+
+
+
 /* ヘッダー */
 header {
     background-color: #000000; /* ヘッダー背景 */
@@ -211,4 +214,15 @@ header h1 {
 .mv-list{
 width: 100%;
 aspect-ratio: 16/9;
+}
+
+h3 { color: #5f5757; }
+h3:hover { color: #ffffff; }
+
+.main-nav li a {
+  background-color: #000000;
+  color: #ffffff;
+}
+.main-nav li a:hover {
+  background-color: #333333;
 }
