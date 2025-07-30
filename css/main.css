@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/* 基本設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* ダークグレーの背景 */
+    color: #e0e0e0; 
+}
+
+a {
+    color: #b0b0b0; /* リンク */
+    text-decoration: none;
+}
+
+
+/* ヘッダー */
+header {
+    background-color: #000000; /* ヘッダー背景 */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid #333333; /* 下部に細いボーダー */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav li a {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+
+/* メインコンテンツのコンテナ */
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #222222; /* 各セクションの背景色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 0.5rem;
+}
+
+/* Aboutセクション */
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333333; /* カードの背景色 */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    text-align: center;
+}
+
+.card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #b0b0b0;
+}
+
+/* Membersセクション */
+.member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.member h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 1rem;
+}
+
+.member-card {
+    background-color: #333333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 45%; /* 2列表示 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.member-card p {
+    color: #b0b0b0;
+    margin: 0.5rem 0;
+}
+
+.member-card .position {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+.member-card .comment {
+    font-style: italic;
+    color: #909090;
+    font-size: 0.9em;
+}
+
+
+.instagram-media {
+    background: #444 !important; 
+    border: 1px solid #555 !important; 
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5),0 1px 5px 0 rgba(0,0,0,0.15) !important; 
+}
+
+.instagram-media a {
+    color: #b0b0b0 !important; 
+}
+
+/*MVセクションン */
+.mv-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.mv-link {
+    background-color: #333333;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.mv-link p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.mv-link iframe {
+    width: 100%;
+    max-width: 560px; 
+    height: 315px;
+    border-radius: 5px;
+} 
+
+
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .member-card {
+        width: 90%; /* 1列表示 */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
+
+.mv-list{
+width: 100%;
+aspect-ratio: 16/9;
+}
